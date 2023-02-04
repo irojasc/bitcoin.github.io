@@ -15,6 +15,7 @@
     --grey: #BABABA;
     --off-white: #FAF8F7;
     --just-white: #FFFFFF;
+    
 }
 
 * {
@@ -44,6 +45,7 @@ header img{
     height: 24px;
     margin: 35px 0 35px;
     align-self: center;
+    
 }
 
 .header__title-container {
@@ -423,7 +425,7 @@ main {
 }
 
 
-.plans__fees--slider .plans__fees--slider__card {
+.plans__fees--slider .plans__fees--slider__card, .card2 {
     position: relative;
     scroll-snap-align: center;
     width: 70%;
@@ -438,18 +440,8 @@ main {
     text-align: center;
 }
 
-.plans__fees--slider .card2 {
-    scroll-snap-align: center;
-    width: 70%;
-    min-width: 230px;
-    max-width: 300px;
-    height: 250px;
-    margin: 0 20px;
-    padding: 0 15px;
-    background-color: var(--just-white);
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px 0px #59491E29;
-    text-align: center;
+.plans__fees--slider .card2 { 
+    position: static;
 }
 
 .fee__recomended {
