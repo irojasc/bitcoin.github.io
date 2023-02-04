@@ -151,16 +151,26 @@ main {
 }
 
 .main__exchange-container__tables {
-    margin: 0 auto;
+    margin-top: 25px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: grid;
+    /* grid-template-columns: repeat(2, min-content); */
+    /* grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); */
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    padding: 0 75px;
+    gap: 75px;
 }
 
 
 .main__tables__currency {
+    scroll-snap-align: center;
     width: 70%;
     min-width: 224px;
     max-width: 500px;
     height: 360px;
-    margin: 15px auto;
+    margin: 15px 0;
     font-family: 'Inter', sans-serif;
 }
 
@@ -234,7 +244,7 @@ main {
 }
 
 
-.currency_table_update {
+.currency_table_update, .tips_table_update {
     width: max-content;
     height: 30px;
     margin: 15px auto;
@@ -243,7 +253,11 @@ main {
     border-radius: 8px;
 }
 
-.currency_table_update p{
+.tips_table_update {
+    background-color: var(--soft-blue);
+}
+
+.currency_table_update p, .tips_table_update p{
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: var(--warm-black)
@@ -559,3 +573,10 @@ footer section a{
   .plans__fees--slider::-webkit-scrollbar-thumb {
     background-color: var(--bitcoin-orange);
   }
+
+@media screen and (min-width: 670px){
+    .main__exchange-container__tables {
+        grid-template-columns: repeat(2, min-content);
+        place-content: center;
+    }
+}
